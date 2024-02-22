@@ -6,5 +6,6 @@
 
 Go to:
 
+```URL
 chrome://extensions/
-
+```
