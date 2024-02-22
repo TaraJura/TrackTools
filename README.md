@@ -10,6 +10,6 @@ Go to:
 chrome://extensions/
 ```
 
-Click on this button:
+## Click on this button:
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut1.png)
