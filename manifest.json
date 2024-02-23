@@ -4,6 +4,7 @@
     "version": "1.0",
     "description": "Personal AI Tracker 🤖",
     "permissions": [
+      "activeTab",
       "cookies"
     ],
     "host_permissions": [
