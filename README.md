@@ -1,6 +1,10 @@
+### Chrome extenstion
+
 # TrackTools
- Personal AI Tracker 🤖 
- ### Chrome extenstion
+    Personal AI Tracker 🤖 
+
+# DOWNLOAD (.zip)
+[Link Text](https://github.com/TaraJura/TrackTools/archive/refs/heads/main.zip)
 
 # How to download the extension
 
@@ -21,3 +25,7 @@ chrome://extensions/
 ## Find TrackTools Extension!
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut3.png)
+
+
+
+

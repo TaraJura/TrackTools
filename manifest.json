@@ -4,10 +4,11 @@
     "version": "1.0",
     "description": "Personal AI Tracker 🤖",
     "permissions": [
-      "cookies",
-      "<all_urls>"
+      "cookies"
     ],
-  
+    "host_permissions": [
+      "*://*/*"
+    ],
     "action": {
       "default_icon": {
         "16": "img16.png",

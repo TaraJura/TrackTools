@@ -1,22 +1,3 @@
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
-console.log('Hello world from the content.js!');
+chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
+    console.log(response.cookies);
+  });
