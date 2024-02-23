@@ -1,5 +1,5 @@
 # TrackTools
-    Personal AI Tracker 🤖 
+    Simple Chrome Extension Tracker
 
 ### Type of software: Chrome extenstion
 
