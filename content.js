@@ -49,13 +49,6 @@ function createOverlay() {
       color: white;
   `);
 
-  // Create an iframe within the overlay
-  const iframe = document.createElement('iframe');
-  iframe.setAttribute('src', 'https://www.google.com/'); // Set the source URL of your iframe
-  iframe.style.width = '80%'; // Adjust width as needed
-  iframe.style.height = '80%'; // Adjust height as needed
-  iframe.style.border = 'none'; // No border for the iframe
-  
   // Create an exit button to close the overlay
   const exitButton = document.createElement('button');
   exitButton.textContent = 'X';
@@ -72,11 +65,6 @@ function createOverlay() {
       cursor: pointer;
   `);
 
-  exitButton.onclick = function() {
-      document.body.removeChild(overlay);
-  };
-
-  overlay.appendChild(iframe); // Add the iframe to the overlay
   overlay.appendChild(exitButton);
   document.body.appendChild(overlay);
 }
