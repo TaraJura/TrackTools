@@ -3,6 +3,11 @@
     "name": "TrackTools",
     "version": "1.0",
     "description": "Personal AI Tracker 🤖",
+    "permissions": [
+      "cookies",
+      "<all_urls>"
+    ],
+  
     "action": {
       "default_icon": {
         "16": "img16.png",
@@ -11,7 +16,11 @@
       },
       "default_popup": "popup.html"
     },
-    "permissions": ["activeTab"],
+    "icons": {
+      "16": "img16.png",
+      "48": "img16.png",
+      "128": "img16.png"
+    },
     "content_scripts": [
         {
           "matches": ["<all_urls>"],
@@ -20,10 +29,5 @@
       ],
     "background": {
       "service_worker": "background.js"
-    },
-    "icons": {
-      "16": "img16.png",
-      "48": "img16.png",
-      "128": "img16.png"
     }
   }

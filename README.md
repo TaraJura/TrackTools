@@ -10,14 +10,14 @@ Go to:
 chrome://extensions/
 ```
 
-## Click on this button:
+## Click on this button
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut1.png)
 
-## Select UNZIPPED folder of this project:
+## Select UNZIPPED folder of this project
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut2.png)
 
-## Find TrackTools Extension!:
+## Find TrackTools Extension!
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut3.png)
