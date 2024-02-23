@@ -4,7 +4,7 @@
     Personal AI Tracker 🤖 
 
 # DOWNLOAD (.zip)
-[Link Text](https://github.com/TaraJura/TrackTools/archive/refs/heads/main.zip)
+[TrackTools <-- DOWNLOAD](https://github.com/TaraJura/TrackTools/archive/refs/heads/main.zip)
 
 # How to download the extension
 
