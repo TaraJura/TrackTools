@@ -26,6 +26,3 @@ chrome://extensions/
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut3.png)
 
-
-
-
