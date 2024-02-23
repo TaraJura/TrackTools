@@ -1,7 +1,7 @@
-### Chrome extenstion
-
 # TrackTools
     Personal AI Tracker 🤖 
+
+### Type of software: Chrome extenstion
 
 # DOWNLOAD (.zip)
 [TrackTools <-- DOWNLOAD](https://github.com/TaraJura/TrackTools/archive/refs/heads/main.zip)
