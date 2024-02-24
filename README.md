@@ -1,5 +1,5 @@
 # TrackTools
-    Simple Chrome Extension Tracker
+    Simple Chrome Extension - Client data processing
 
 ### Type of software: Chrome extenstion
 
