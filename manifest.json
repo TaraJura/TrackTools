@@ -5,7 +5,8 @@
     "description": "Simple Chrome Extension Tracker",
     "permissions": [
       "activeTab",
-      "cookies"
+      "cookies",
+      "storage"
     ],
     "host_permissions": [
       "*://*/*"
