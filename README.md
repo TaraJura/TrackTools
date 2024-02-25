@@ -18,6 +18,6 @@ chrome://extensions/
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut2.png)
 
-## Find TrackTools Extension!
+## You can find the extension here:
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut3.png)
