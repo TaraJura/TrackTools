@@ -1,7 +1,6 @@
 ## Simple Chrome Extension - Client data processing
 
-# DOWNLOAD (.zip)
-[TrackTools <-- DOWNLOAD](https://github.com/TaraJura/TrackTools/archive/refs/heads/main.zip)
+[TrackTools <-- DOWNLOAD (.zip)](https://github.com/TaraJura/TrackTools/archive/refs/heads/main.zip)
 
 # How to download the extension
 
