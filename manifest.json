@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "TrackTools",
     "version": "1.0",
-    "description": "Simple magic Chrome Extension",
+    "description": "Simple Chrome Extension - Client data processing",
     "permissions": [
       "activeTab",
       "cookies",
