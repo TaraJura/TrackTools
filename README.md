@@ -14,7 +14,7 @@ chrome://extensions/
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut1.png)
 
-## Select UNZIPPED folder of this project
+## Unzip downloaded folder and select it
 
 ![TrackTools Extension Tutorial](https://raw.githubusercontent.com/TaraJura/freephotos/main/tut2.png)
 
