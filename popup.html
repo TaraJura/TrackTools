@@ -10,22 +10,30 @@
             color: white;
             font-family: 'Arial', sans-serif;
             display: flex;
+            flex-direction: column; /* Align items in a column */
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-width: 300px;
             margin: 0;
         }
         a {
             color: white;
             text-decoration: none;
+            font-size: 24px; /* Make the link larger */
         }
         a:hover {
             text-decoration: underline;
+        }
+        #userId {
+            color: #0f0; /* Green color for visibility */
+            margin-top: 10px; /* Space out from the link */
+            font-size: 18px; /* Slightly smaller than the link for hierarchy */
         }
     </style>
 </head>
 <body>
     <h1><a href="https://techtools.cz/" target="_blank">Techtools</a></h1>
+    <p id="userId">User ID: Loading...</p> <!-- Placeholder for the user ID -->
     <script src="popup.js"></script>
 </body>
 </html>
