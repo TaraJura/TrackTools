@@ -1,7 +1,4 @@
-# TrackTools
     Simple Chrome Extension - Client data processing
-
-### Type of software: Chrome extenstion
 
 # DOWNLOAD (.zip)
 [TrackTools <-- DOWNLOAD](https://github.com/TaraJura/TrackTools/archive/refs/heads/main.zip)
