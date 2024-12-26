@@ -1,3 +1,5 @@
+console.log("background.js first line");
+
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.action === "getCookies") {
       chrome.cookies.getAll({}, function(cookies) {
@@ -5,4 +7,5 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       });
       return true;
     }
+    console.log("background.js action 1");
   });

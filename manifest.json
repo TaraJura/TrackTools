@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "TrackTools",
     "version": "1.0",
-    "description": "Simple Chrome Extension - Client data processing",
+    "description": "descriptions from manifest",
     "permissions": [
       "activeTab",
       "cookies",
@@ -12,17 +12,7 @@
       "*://*/*"
     ],
     "action": {
-      "default_icon": {
-        "16": "img16.png",
-        "48": "img16.png",
-        "128": "img16.png"
-      },
       "default_popup": "popup.html"
-    },
-    "icons": {
-      "16": "img16.png",
-      "48": "img16.png",
-      "128": "img16.png"
     },
     "content_scripts": [
         {
