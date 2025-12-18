@@ -1,26 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "TrackTools",
-    "version": "1.0",
-    "description": "descriptions from manifest",
-    "permissions": [
-      "activeTab",
-      "cookies",
-      "storage"
-    ],
-    "host_permissions": [
-      "*://*/*"
-    ],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-          "matches": ["<all_urls>"],
-          "js": ["content.js"]
-        }
-      ],
-    "background": {
-      "service_worker": "background.js"
+  "manifest_version": 3,
+  "name": "Magic Extension - Browser Analytics",
+  "version": "1.0.0",
+  "description": "Track your browsing habits with powerful analytics",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "idle"
+  ],
+  "host_permissions": [
+    "https://techtools.cz/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
+}
